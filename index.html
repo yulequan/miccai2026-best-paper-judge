@@ -61,7 +61,7 @@ function render(){
    out+='<article class="card"><div class="row"><div class="board">Board '+esc(p.board)+'</div><div class="tags">'+(p.moved?'<span class="tag move">MOVED</span>':'')+(p.tentative?'<span class="tag warn">TENTATIVE</span>':'')+'</div></div>';
    out+='<div class="title">'+esc(p.title)+'</div>';
    if(p.moveNote)out+='<div class="moveNote">'+esc(p.moveNote)+'</div>';
-   if(p.oral)out+='<div class="oralLine"><b>Oral '+esc(p.oral)+':</b> '+esc(oralMeta[p.oral]||'')+'</div>';
+   if(p.oral)out+='<div class="oralLine"><b>Oral '+esc(p.oral)+'</b> · <b>Time:</b> '+esc(oralMeta[p.oral]||'')+'</div>';
    else out+='<div class="oralLine">No oral/spotlight listed in the updated score sheet.</div>';
    out+='<div class="scoreline"><label>Score</label><input type="number" inputmode="decimal" step="0.1" placeholder="e.g. 8.5" value="'+esc(s.score??'')+'" oninput="save(\''+p.board+'\',\'score\',this.value)"></div>';
    out+='<div class="scoreline"><label>Notes</label><textarea placeholder="Quick notes…" oninput="save(\''+p.board+'\',\'note\',this.value)">'+esc(s.note??'')+'</textarea></div><div class="saved" id="saved-'+esc(p.board)+'"></div></article>';
