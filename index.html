@@ -5,165 +5,77 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>MICCAI 2026 Best Paper Candidate Judge Sheet</title>
 <style>
-:root {
-  --bg:#f5f6f8; --card:#fff; --text:#111827; --muted:#6b7280; --line:#e5e7eb;
-  --accent:#1d4ed8; --accent2:#eff6ff; --good:#047857;
-}
-* { box-sizing:border-box; }
-body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--text); }
-header { position:sticky; top:0; z-index:10; background:rgba(255,255,255,.96); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); padding:12px 14px; }
-h1 { font-size:18px; margin:0 0 8px; }
-.toolbar { display:flex; flex-wrap:wrap; gap:8px; }
-button, .filebtn { border:1px solid var(--line); background:white; border-radius:10px; padding:9px 12px; font-size:14px; }
-button.primary { background:var(--accent); color:white; border-color:var(--accent); }
-main { max-width:850px; margin:0 auto; padding:14px; }
-.summary { font-size:13px; color:var(--muted); margin:0 0 12px; }
-.session { margin:18px 0 8px; }
-.session h2 { font-size:17px; margin:0 0 3px; }
-.session .meta { color:var(--muted); font-size:13px; }
-.card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:13px; margin:10px 0; box-shadow:0 1px 2px rgba(0,0,0,.03); }
-.row { display:flex; gap:10px; align-items:flex-start; justify-content:space-between; }
-.poster { font-weight:700; color:var(--accent); white-space:nowrap; }
-.title { font-weight:650; line-height:1.35; margin:7px 0 9px; }
-.tags { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
-.tag { font-size:12px; color:#374151; background:#f3f4f6; border-radius:999px; padding:4px 8px; }
-.scoreline { display:grid; grid-template-columns:86px 1fr; gap:8px; align-items:center; margin-top:8px; }
-label { font-size:13px; color:#374151; }
-input[type="number"], textarea { width:100%; border:1px solid #cbd5e1; border-radius:9px; padding:10px; font-size:16px; background:#fff; }
-input[type="number"]:focus, textarea:focus { outline:2px solid #bfdbfe; border-color:#60a5fa; }
-textarea { min-height:58px; resize:vertical; }
-.saved { font-size:11px; color:var(--good); margin-top:5px; min-height:14px; }
-footer { color:var(--muted); font-size:12px; padding:16px 4px 40px; line-height:1.5; }
-@media (max-width:520px) {
-  main { padding:10px; }
-  .scoreline { grid-template-columns:1fr; gap:4px; }
-  .card { border-radius:12px; }
-}
+:root{--bg:#f5f6f8;--card:#fff;--text:#111827;--muted:#6b7280;--line:#e5e7eb;--accent:#1d4ed8;--good:#047857;--move:#9a3412;--movebg:#fff7ed;--warn:#92400e;--warnbg:#fffbeb}
+*{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:12px 14px}
+h1{font-size:18px;margin:0 0 8px}.toolbar{display:flex;flex-wrap:wrap;gap:8px}
+button,.filebtn{border:1px solid var(--line);background:white;border-radius:10px;padding:9px 12px;font-size:14px}button.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+main{max-width:850px;margin:0 auto;padding:14px}.summary{font-size:13px;color:var(--muted);margin:0 0 12px}
+.notice{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:10px 12px;font-size:13px;line-height:1.45;margin-bottom:14px}
+.session{margin:20px 0 8px}.session h2{font-size:17px;margin:0 0 3px}.session .meta{color:var(--muted);font-size:13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;margin:10px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.row{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}.board{font-weight:800;color:var(--accent);white-space:nowrap}.title{font-weight:650;line-height:1.35;margin:7px 0 9px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}.tag{font-size:12px;color:#374151;background:#f3f4f6;border-radius:999px;padding:4px 8px}
+.tag.move{color:var(--move);background:var(--movebg);font-weight:700}.tag.warn{color:var(--warn);background:var(--warnbg);font-weight:700}
+.moveNote{font-size:12px;color:var(--move);background:var(--movebg);border-left:3px solid #fb923c;padding:7px 8px;border-radius:6px;margin:8px 0}
+.oralLine{font-size:12px;color:#374151;margin:5px 0 9px;line-height:1.4}
+.scoreline{display:grid;grid-template-columns:86px 1fr;gap:8px;align-items:center;margin-top:8px}label{font-size:13px;color:#374151}
+input[type="number"],textarea{width:100%;border:1px solid #cbd5e1;border-radius:9px;padding:10px;font-size:16px;background:#fff}
+input[type="number"]:focus,textarea:focus{outline:2px solid #bfdbfe;border-color:#60a5fa}textarea{min-height:58px;resize:vertical}.saved{font-size:11px;color:var(--good);margin-top:5px;min-height:14px}
+footer{color:var(--muted);font-size:12px;padding:16px 4px 40px;line-height:1.5}
+@media(max-width:520px){main{padding:10px}.scoreline{grid-template-columns:1fr;gap:4px}.card{border-radius:12px}}
 </style>
 </head>
 <body>
 <header>
-  <h1>MICCAI 2026 — Best Paper Candidate Judge Sheet</h1>
-  <div class="toolbar">
-    <button class="primary" onclick="exportCSV()">Export CSV</button>
-    <button onclick="exportJSON()">Export JSON</button>
-    <label class="filebtn">Import JSON<input id="importFile" type="file" accept=".json,application/json" hidden></label>
-    <button onclick="clearAll()">Clear scores</button>
-  </div>
+<h1>MICCAI 2026 — Best Paper Candidate Judge Sheet</h1>
+<div class="toolbar">
+<button class="primary" onclick="exportCSV()">Export CSV</button>
+<button onclick="exportJSON()">Export JSON</button>
+<label class="filebtn">Import JSON<input id="importFile" type="file" accept=".json,application/json" hidden></label>
+<button onclick="clearAll()">Clear scores</button>
+</div>
 </header>
-
 <main>
-  <p class="summary"><span id="count"></span> papers · Scores and notes are saved automatically in this browser using local storage.</p>
-  <div id="app"></div>
-  <footer>
-    Important: browser local storage stays on this device/browser. Export JSON or CSV before clearing browser data, switching phones, or using private browsing.
-  </footer>
+<p class="summary"><span id="count"></span> papers · Updated poster reassignment applied · Scores save automatically on this browser.</p>
+<div class="notice"><b>Updated poster arrangement:</b> several former Wednesday-PM posters have been moved earlier. For moved papers, the card shows the <b>original board number</b> you should look for. BIGUS is marked tentative because the updated sheet says “not confirmed”.</div>
+<div id="app"></div>
+<footer>Browser local storage stays on this device/browser. Export JSON or CSV before clearing browser data, switching phones, or using private browsing.</footer>
 </main>
-
 <script>
-const papers = [{"date": "2026-09-28", "day": "Monday", "session": "Poster Session 1", "time": "16:00–18:00", "poster": "M-PM-134", "title": "LinGuinE: Longitudinal Guidance Estimation for Volumetric Tumour Segmentation", "oral": "—"}, {"date": "2026-09-29", "day": "Tuesday", "session": "Poster Session 2", "time": "10:30–12:30", "poster": "T-AM-057", "title": "DosePlug: Observation-Driven Dose Modeling for Robust Low-Dose Reconstruction and Segmentation", "oral": "—"}, {"date": "2026-09-29", "day": "Tuesday", "session": "Poster Session 2", "time": "10:30–12:30", "poster": "T-AM-097", "title": "HemoPIC: A Physics-Informed Cerebral Hemodynamics Digital Twin for Brain Perfusion", "oral": "O3C-O3"}, {"date": "2026-09-29", "day": "Tuesday", "session": "Poster Session 3", "time": "15:30–17:30", "poster": "T-PM-005", "title": "Time Matters: Rethinking Diffusion and Flow Models in One-Step Medical Image Translation", "oral": "O4A-O1"}, {"date": "2026-09-29", "day": "Tuesday", "session": "Poster Session 3", "time": "15:30–17:30", "poster": "T-PM-043", "title": "LangOR: 3D Language Field Reconstruction for Operating Room", "oral": "—"}, {"date": "2026-09-29", "day": "Tuesday", "session": "Poster Session 3", "time": "15:30–17:30", "poster": "T-PM-062", "title": "Brain-DiT: A Universal Multi-state fMRI Foundation Model with Metadata-Conditioned Pretraining", "oral": "—"}, {"date": "2026-09-29", "day": "Tuesday", "session": "Poster Session 3", "time": "15:30–17:30", "poster": "T-PM-082", "title": "From Exams to Trajectories: Neural Controlled Differential Equations for Longitudinal Mammography Vision-Language Pretraining", "oral": "O2B-O2"}, {"date": "2026-09-29", "day": "Tuesday", "session": "Poster Session 3", "time": "15:30–17:30", "poster": "T-PM-098", "title": "FairGE: Gated Expert Routing for Intersectional Fairness in Medical Foundation Models", "oral": "O4B-O1"}, {"date": "2026-09-29", "day": "Tuesday", "session": "Poster Session 3", "time": "15:30–17:30", "poster": "T-PM-120", "title": "SWoMo: Neuro-Symbolic World Model for Cataract Surgery Simulation", "oral": "O4C-S1"}, {"date": "2026-09-29", "day": "Tuesday", "session": "Poster Session 3", "time": "15:30–17:30", "poster": "T-PM-152", "title": "LEGEND: A Language-Aligned EEG Foundation Model with Flow Matching Latent Denoising", "oral": "O4C-O2"}, {"date": "2026-09-29", "day": "Tuesday", "session": "Poster Session 3", "time": "15:30–17:30", "poster": "T-PM-162", "title": "Skill-Evolving Grounded Reasoning for Free-Text Promptable 3D Medical Image Segmentation", "oral": "—"}, {"date": "2026-09-29", "day": "Tuesday", "session": "Poster Session 3", "time": "15:30–17:30", "poster": "T-PM-220", "title": "Planning the Perfect Burn: Multi-Objective PSO for Multi-Needle Thermal Ablation", "oral": "O1C-O2"}, {"date": "2026-09-30", "day": "Wednesday", "session": "Poster Session 4", "time": "10:30–12:30", "poster": "W-AM-017", "title": "CancerVerse: A Fully Open Longitudinal and Multimodal Dataset for Multicancer Screening", "oral": "—"}, {"date": "2026-09-30", "day": "Wednesday", "session": "Poster Session 4", "time": "10:30–12:30", "poster": "W-AM-100", "title": "GLeVE: Graph-Guided Lesion Grounding with Proposal Verification in 3D CT", "oral": "—"}, {"date": "2026-09-30", "day": "Wednesday", "session": "Poster Session 4", "time": "10:30–12:30", "poster": "W-AM-102", "title": "TopoOR: A Unified Topological Scene Representation for the Operating Room", "oral": "—"}, {"date": "2026-09-30", "day": "Wednesday", "session": "Poster Session 4", "time": "10:30–12:30", "poster": "W-AM-124", "title": "Inversion from ECG Foundation Model", "oral": "—"}, {"date": "2026-09-30", "day": "Wednesday", "session": "Poster Session 4", "time": "10:30–12:30", "poster": "W-AM-158", "title": "Exploiting Longitudinal Context in Clinician-Verified Interactive Lesion Tracking", "oral": "O4B-O2"}, {"date": "2026-09-30", "day": "Wednesday", "session": "Poster Session 4", "time": "10:30–12:30", "poster": "W-AM-190", "title": "Robotic Ultrasound Makes CBCT Alive", "oral": "O1C-O1"}, {"date": "2026-09-30", "day": "Wednesday", "session": "Poster Session 5", "time": "15:30–17:30", "poster": "W-PM-041", "title": "Low-Rank-Modulated Functa: Exploring the Latent Space of Implicit Neural Representations for Interpretable Ultrasound Video Analysis", "oral": "O6A-O1"}, {"date": "2026-09-30", "day": "Wednesday", "session": "Poster Session 5", "time": "15:30–17:30", "poster": "W-PM-050", "title": "Conditional Latent Diffusion Model with Fourier-based Motion Modelling for Virtual Population Synthesis", "oral": "O6C-O2"}, {"date": "2026-09-30", "day": "Wednesday", "session": "Poster Session 5", "time": "15:30–17:30", "poster": "W-PM-064", "title": "CardiacPULSE: Frequency-Aware Self-Supervised Cardiac Phase Detection in Echocardiography", "oral": "O6C-O5"}, {"date": "2026-09-30", "day": "Wednesday", "session": "Poster Session 5", "time": "15:30–17:30", "poster": "W-PM-089", "title": "L-TGVN: Leveraging Longitudinal Priors for Personalized Rapid MRI", "oral": "O6A-O4"}, {"date": "2026-09-30", "day": "Wednesday", "session": "Poster Session 5", "time": "15:30–17:30", "poster": "W-PM-128", "title": "STAMP: Subtype-Aware Spatio-Temporal Atlases for Personalized Prediction of Longitudinal Alzheimer’s Disease Progression", "oral": "O6B-O2"}, {"date": "2026-09-30", "day": "Wednesday", "session": "Poster Session 5", "time": "15:30–17:30", "poster": "W-PM-206", "title": "BIGUS: Beam Integrated Gaussian Scattering for Continuous Ultrasound View Synthesis", "oral": "O6A-O2"}, {"date": "2026-09-30", "day": "Wednesday", "session": "Poster Session 5", "time": "15:30–17:30", "poster": "W-PM-223", "title": "Automated Optical Density Normalization for Myelin Quantification: Cross-Modal Validation with 7T Ex Vivo MRI", "oral": "O6C-O1"}];
-const KEY = 'miccai2026-best-paper-judge-v1';
-let state = JSON.parse(localStorage.getItem(KEY) || '{}');
-
-function esc(s) {
-  return String(s ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
-}
-function save(id, field, value) {
-  if (!state[id]) state[id] = {};
-  state[id][field] = value;
-  state[id].updated = new Date().toISOString();
-  localStorage.setItem(KEY, JSON.stringify(state));
-  const el = document.getElementById('saved-'+id);
-  if (el) {
-    el.textContent = 'Saved';
-    setTimeout(()=>{ if (el) el.textContent=''; }, 900);
+const papers=[{"date":"2026-09-28","day":"Monday","session":"Poster Session 1","time":"16:00–18:00","board":"M-PM-134","title":"LinGuinE: Longitudinal Guidance Estimation for Volumetric Tumour Segmentation","oral":"","moved":false},{"date":"2026-09-28","day":"Monday","session":"Poster Session 1","time":"16:00–18:00","board":"W-PM-041","title":"Low-Rank-Modulated Functa: Exploring the Latent Space of Implicit Neural Representations for Interpretable Ultrasound Video Analysis","oral":"O6A-O1","moved":true,"moveNote":"Moved from Poster Session 5; board remains W-PM-041"},{"date":"2026-09-28","day":"Monday","session":"Poster Session 1","time":"16:00–18:00","board":"W-PM-128","title":"STAMP: Subtype-Aware Spatio-Temporal Atlases for Personalized Prediction of Longitudinal Alzheimer’s Disease Progression","oral":"O6B-O2","moved":true,"moveNote":"Moved from Poster Session 5; board remains W-PM-128"},{"date":"2026-09-29","day":"Tuesday","session":"Poster Session 2","time":"10:30–12:30","board":"T-AM-057","title":"DosePlug: Observation-Driven Dose Modeling for Robust Low-Dose Reconstruction and Segmentation","oral":"","moved":false},{"date":"2026-09-29","day":"Tuesday","session":"Poster Session 2","time":"10:30–12:30","board":"T-AM-097","title":"HemoPIC: A Physics-Informed Cerebral Hemodynamics Digital Twin for Brain Perfusion","oral":"O3C-O3","moved":false},{"date":"2026-09-29","day":"Tuesday","session":"Poster Session 2","time":"10:30–12:30","board":"W-PM-050","title":"Conditional Latent Diffusion Model with Fourier-based Motion Modelling for Virtual Population Synthesis","oral":"O6C-O2","moved":true,"moveNote":"Moved from Poster Session 5; board remains W-PM-050"},{"date":"2026-09-29","day":"Tuesday","session":"Poster Session 2","time":"10:30–12:30","board":"W-PM-064","title":"CardiacPULSE: Frequency-Aware Self-Supervised Cardiac Phase Detection in Echocardiography","oral":"O6C-O5","moved":true,"moveNote":"Moved from Poster Session 5; board remains W-PM-064"},{"date":"2026-09-29","day":"Tuesday","session":"Poster Session 2","time":"10:30–12:30","board":"W-PM-089","title":"L-TGVN: Leveraging Longitudinal Priors for Personalized Rapid MRI","oral":"O6A-O4","moved":true,"moveNote":"Moved from Poster Session 5; board remains W-PM-089"},{"date":"2026-09-29","day":"Tuesday","session":"Poster Session 2","time":"10:30–12:30","board":"W-PM-206","title":"BIGUS: Beam Integrated Gaussian Scattering for Continuous Ultrasound View Synthesis","oral":"O6A-O2","moved":true,"tentative":true,"moveNote":"Updated sheet: not confirmed; expected Poster Session 2 (T-AM), board W-PM-206"},{"date":"2026-09-29","day":"Tuesday","session":"Poster Session 3","time":"15:30–17:30","board":"T-PM-005","title":"Time Matters: Rethinking Diffusion and Flow Models in One-Step Medical Image Translation","oral":"O4A-O1","moved":false},{"date":"2026-09-29","day":"Tuesday","session":"Poster Session 3","time":"15:30–17:30","board":"T-PM-043","title":"LangOR: 3D Language Field Reconstruction for Operating Room","oral":"","moved":false},{"date":"2026-09-29","day":"Tuesday","session":"Poster Session 3","time":"15:30–17:30","board":"T-PM-062","title":"Brain-DiT: A Universal Multi-state fMRI Foundation Model with Metadata-Conditioned Pretraining","oral":"","moved":false},{"date":"2026-09-29","day":"Tuesday","session":"Poster Session 3","time":"15:30–17:30","board":"T-PM-082","title":"From Exams to Trajectories: Neural Controlled Differential Equations for Longitudinal Mammography Vision-Language Pretraining","oral":"O2B-O2","moved":false},{"date":"2026-09-29","day":"Tuesday","session":"Poster Session 3","time":"15:30–17:30","board":"T-PM-098","title":"FairGE: Gated Expert Routing for Intersectional Fairness in Medical Foundation Models","oral":"O4B-O1","moved":false},{"date":"2026-09-29","day":"Tuesday","session":"Poster Session 3","time":"15:30–17:30","board":"T-PM-120","title":"SWoMo: Neuro-Symbolic World Model for Cataract Surgery Simulation","oral":"O4C-S1","moved":false},{"date":"2026-09-29","day":"Tuesday","session":"Poster Session 3","time":"15:30–17:30","board":"T-PM-152","title":"LEGEND: A Language-Aligned EEG Foundation Model with Flow Matching Latent Denoising","oral":"O4C-O2","moved":false},{"date":"2026-09-29","day":"Tuesday","session":"Poster Session 3","time":"15:30–17:30","board":"T-PM-162","title":"Skill-Evolving Grounded Reasoning for Free-Text Promptable 3D Medical Image Segmentation","oral":"","moved":false},{"date":"2026-09-29","day":"Tuesday","session":"Poster Session 3","time":"15:30–17:30","board":"T-PM-220","title":"Planning the Perfect Burn: Multi-Objective PSO for Multi-Needle Thermal Ablation","oral":"O1C-O2","moved":false},{"date":"2026-09-29","day":"Tuesday","session":"Poster Session 3","time":"15:30–17:30","board":"W-PM-223","title":"Automated Optical Density Normalization for Myelin Quantification: Cross-Modal Validation with 7T Ex Vivo MRI","oral":"O6C-O1","moved":true,"moveNote":"Moved from Poster Session 5; board remains W-PM-223"},{"date":"2026-09-30","day":"Wednesday","session":"Poster Session 4","time":"10:30–12:30","board":"W-AM-017","title":"CancerVerse: A Fully Open Longitudinal and Multimodal Dataset for Multicancer Screening","oral":"","moved":false},{"date":"2026-09-30","day":"Wednesday","session":"Poster Session 4","time":"10:30–12:30","board":"W-AM-100","title":"GLeVE: Graph-Guided Lesion Grounding with Proposal Verification in 3D CT","oral":"","moved":false},{"date":"2026-09-30","day":"Wednesday","session":"Poster Session 4","time":"10:30–12:30","board":"W-AM-102","title":"TopoOR: A Unified Topological Scene Representation for the Operating Room","oral":"","moved":false},{"date":"2026-09-30","day":"Wednesday","session":"Poster Session 4","time":"10:30–12:30","board":"W-AM-124","title":"Inversion from ECG Foundation Model","oral":"","moved":false},{"date":"2026-09-30","day":"Wednesday","session":"Poster Session 4","time":"10:30–12:30","board":"W-AM-158","title":"Exploiting Longitudinal Context in Clinician-Verified Interactive Lesion Tracking","oral":"O4B-O2","moved":false},{"date":"2026-09-30","day":"Wednesday","session":"Poster Session 4","time":"10:30–12:30","board":"W-AM-190","title":"Robotic Ultrasound Makes CBCT Alive","oral":"O1C-O1","moved":false}];
+const oralMeta={"O1C-O1":"Mon Sep 28 · 10:30–12:00 · O1C · Cassin Hall 2","O1C-O2":"Mon Sep 28 · 10:30–12:00 · O1C · Cassin Hall 2","O2B-O2":"Mon Sep 28 · 15:00–16:00 · O2B · Schweitzer Hall 1","O3C-O3":"Tue Sep 29 · 08:30–09:30 · O3C · Cassin Hall 2","O4A-O1":"Tue Sep 29 · 14:00–15:30 · O4A · Erasme Hall","O4B-O1":"Tue Sep 29 · 14:00–15:30 · O4B · Schweitzer Hall 1","O4B-O2":"Tue Sep 29 · 14:00–15:30 · O4B · Schweitzer Hall 1","O4C-S1":"Tue Sep 29 · 14:00–15:30 · O4C · Cassin Hall 2","O4C-O2":"Tue Sep 29 · 14:00–15:30 · O4C · Cassin Hall 2","O6A-O1":"Wed Sep 30 · 14:00–15:30 · O6A · Erasme Hall","O6A-O2":"Wed Sep 30 · 14:00–15:30 · O6A · Erasme Hall","O6A-O4":"Wed Sep 30 · 14:00–15:30 · O6A · Erasme Hall","O6B-O2":"Wed Sep 30 · 14:00–15:30 · O6B · Schweitzer Hall 1","O6C-O1":"Wed Sep 30 · 14:00–15:30 · O6C · Cassin Hall 2","O6C-O2":"Wed Sep 30 · 14:00–15:30 · O6C · Cassin Hall 2","O6C-O5":"Wed Sep 30 · 14:00–15:30 · O6C · Cassin Hall 2"};
+const KEY='miccai2026-best-paper-judge-v1';
+let state=JSON.parse(localStorage.getItem(KEY)||'{}');
+function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function save(id,field,value){if(!state[id])state[id]={};state[id][field]=value;state[id].updated=new Date().toISOString();localStorage.setItem(KEY,JSON.stringify(state));const el=document.getElementById('saved-'+id);if(el){el.textContent='Saved';setTimeout(()=>{if(el)el.textContent=''},900)}updateCount()}
+function updateCount(){const scored=papers.filter(p=>state[p.board]?.score!==undefined&&state[p.board]?.score!=='').length;document.getElementById('count').textContent=papers.length+' papers · '+scored+' scored'}
+function render(){
+ const grouped={}; for(const p of papers){const k=[p.date,p.day,p.session,p.time].join('|');(grouped[k] ||= []).push(p)}
+ let out='';
+ for(const [k,arr] of Object.entries(grouped)){
+  const [date,day,session,time]=k.split('|');
+  out+='<section class="session"><h2>'+esc(day)+' · '+esc(session)+'</h2><div class="meta">'+esc(date)+' · '+esc(time)+' · Hall Rhin · '+arr.length+' papers</div></section>';
+  for(const p of arr){
+   const s=state[p.board]||{};
+   out+='<article class="card"><div class="row"><div class="board">Board '+esc(p.board)+'</div><div class="tags">'+(p.moved?'<span class="tag move">MOVED</span>':'')+(p.tentative?'<span class="tag warn">TENTATIVE</span>':'')+'</div></div>';
+   out+='<div class="title">'+esc(p.title)+'</div>';
+   if(p.moveNote)out+='<div class="moveNote">'+esc(p.moveNote)+'</div>';
+   if(p.oral)out+='<div class="oralLine"><b>Oral '+esc(p.oral)+':</b> '+esc(oralMeta[p.oral]||'')+'</div>';
+   else out+='<div class="oralLine">No oral/spotlight listed in the updated score sheet.</div>';
+   out+='<div class="scoreline"><label>Score</label><input type="number" inputmode="decimal" step="0.1" placeholder="e.g. 8.5" value="'+esc(s.score??'')+'" oninput="save(\''+p.board+'\',\'score\',this.value)"></div>';
+   out+='<div class="scoreline"><label>Notes</label><textarea placeholder="Quick notes…" oninput="save(\''+p.board+'\',\'note\',this.value)">'+esc(s.note??'')+'</textarea></div><div class="saved" id="saved-'+esc(p.board)+'"></div></article>';
   }
+ }
+ document.getElementById('app').innerHTML=out;updateCount()
 }
-function render() {
-  const grouped = {};
-  for (const p of papers) {
-    const k = `${p.date}|${p.day}|${p.session}|${p.time}`;
-    (grouped[k] ||= []).push(p);
-  }
-  let out = '';
-  for (const [k, arr] of Object.entries(grouped)) {
-    const [date, day, session, time] = k.split('|');
-    out += `<section class="session"><h2>${esc(day)} · ${esc(session)}</h2><div class="meta">${esc(date)} · ${esc(time)} · Hall Rhin</div></section>`;
-    for (const p of arr) {
-      const s = state[p.poster] || {};
-      out += `
-      <article class="card">
-        <div class="row"><div class="poster">${esc(p.poster)}</div><div class="tag">${esc(p.session)}</div></div>
-        <div class="title">${esc(p.title)}</div>
-        <div class="tags"><span class="tag">Oral: ${esc(p.oral)}</span></div>
-        <div class="scoreline">
-          <label for="score-${p.poster}">Score</label>
-          <input id="score-${p.poster}" type="number" inputmode="decimal" step="0.1" placeholder="e.g. 8.5" value="${esc(s.score ?? '')}" oninput="save('${p.poster}','score',this.value)">
-        </div>
-        <div class="scoreline">
-          <label for="note-${p.poster}">Notes</label>
-          <textarea id="note-${p.poster}" placeholder="Quick notes…" oninput="save('${p.poster}','note',this.value)">${esc(s.note ?? '')}</textarea>
-        </div>
-        <div class="saved" id="saved-${p.poster}"></div>
-      </article>`;
-    }
-  }
-  document.getElementById('app').innerHTML = out;
-  const scored = papers.filter(p => state[p.poster]?.score !== undefined && state[p.poster]?.score !== '').length;
-  document.getElementById('count').textContent = `${papers.length} papers · ${scored} scored`;
-}
-function rows() {
-  return papers.map(p => ({
-    date:p.date, day:p.day, session:p.session, time:p.time, poster:p.poster,
-    title:p.title, oral:p.oral,
-    score: state[p.poster]?.score ?? '',
-    notes: state[p.poster]?.note ?? '',
-    updated: state[p.poster]?.updated ?? ''
-  }));
-}
-function download(name, content, type) {
-  const blob = new Blob([content], {type});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove();
-  setTimeout(()=>URL.revokeObjectURL(url), 1000);
-}
-function exportJSON() {
-  download('MICCAI2026_best_paper_scores.json', JSON.stringify({exportedAt:new Date().toISOString(), rows:rows()}, null, 2), 'application/json');
-}
-function csvCell(v) {
-  const s = String(v ?? '');
-  return '"' + s.replace(/"/g,'""') + '"';
-}
-function exportCSV() {
-  const data = rows();
-  const cols = ['date','day','session','time','poster','title','oral','score','notes','updated'];
-  const csv = [cols.join(','), ...data.map(r => cols.map(c=>csvCell(r[c])).join(','))].join('\n');
-  download('MICCAI2026_best_paper_scores.csv', '\ufeff'+csv, 'text/csv;charset=utf-8');
-}
-document.getElementById('importFile').addEventListener('change', async e => {
-  const f = e.target.files[0]; if (!f) return;
-  try {
-    const obj = JSON.parse(await f.text());
-    const rs = Array.isArray(obj) ? obj : obj.rows;
-    if (!Array.isArray(rs)) throw new Error('Invalid format');
-    for (const r of rs) {
-      if (!r.poster) continue;
-      state[r.poster] = {score:r.score ?? '', note:r.notes ?? r.note ?? '', updated:r.updated ?? new Date().toISOString()};
-    }
-    localStorage.setItem(KEY, JSON.stringify(state));
-    render();
-    alert('Imported successfully.');
-  } catch(err) { alert('Import failed: ' + err.message); }
-  e.target.value='';
-});
-function clearAll() {
-  if (confirm('Clear all saved scores and notes on this device?')) {
-    state = {};
-    localStorage.removeItem(KEY);
-    render();
-  }
-}
+function rows(){return papers.map(p=>({date:p.date,day:p.day,poster_session:p.session,time:p.time,board:p.board,title:p.title,oral:p.oral,oral_schedule:p.oral?oralMeta[p.oral]:'',moved:p.moved?'Yes':'No',move_note:p.moveNote||'',score:state[p.board]?.score??'',notes:state[p.board]?.note??'',updated:state[p.board]?.updated??''}))}
+function download(name,content,type){const blob=new Blob([content],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function exportJSON(){download('MICCAI2026_best_paper_scores.json',JSON.stringify({exportedAt:new Date().toISOString(),rows:rows()},null,2),'application/json')}
+function csvCell(v){const s=String(v??'');return '"'+s.replace(/"/g,'""')+'"'}
+function exportCSV(){const data=rows();const cols=['date','day','poster_session','time','board','title','oral','oral_schedule','moved','move_note','score','notes','updated'];const csv=[cols.join(','),...data.map(r=>cols.map(c=>csvCell(r[c])).join(','))].join('\n');download('MICCAI2026_best_paper_scores.csv','\ufeff'+csv,'text/csv;charset=utf-8')}
+document.getElementById('importFile').addEventListener('change',async e=>{const f=e.target.files[0];if(!f)return;try{const obj=JSON.parse(await f.text());const rs=Array.isArray(obj)?obj:obj.rows;if(!Array.isArray(rs))throw new Error('Invalid format');for(const r of rs){const id=r.board||r.poster;if(!id)continue;state[id]={score:r.score??'',note:r.notes??r.note??'',updated:r.updated??new Date().toISOString()}}localStorage.setItem(KEY,JSON.stringify(state));render();alert('Imported successfully.')}catch(err){alert('Import failed: '+err.message)}e.target.value=''});
+function clearAll(){if(confirm('Clear all saved scores and notes on this device?')){state={};localStorage.removeItem(KEY);render()}}
 render();
 </script>
 </body>
